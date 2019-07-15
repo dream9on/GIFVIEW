@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "GifView.h"
 
 @interface AppDelegate ()
+- (IBAction)Btn_OK:(NSButton *)sender;
+@property (weak) IBOutlet GifView *gifView;
 
 @property (weak) IBOutlet NSWindow *window;
 @end
@@ -25,4 +28,39 @@
 }
 
 
+-(BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
+{
+    return YES;
+}
+
+- (IBAction)Btn_OK:(NSButton *)sender {
+    NSImage *img = [NSImage imageNamed:@"1.gif"];
+    [_gifView setImage:img];
+    
+    //drawProgress();
+}
+
+int drawProgress()
+{
+    int i,num=1;
+    const char *pic = "|/-\\"; // 简易动画特效
+    printf("loading state:\n");
+    while (1) {
+        if (101==num) {
+            printf("\nLoading success!\n");
+            break;
+        }
+        
+        printf("[");
+        for (i=0; i<num/10; i++) {
+            printf("*");
+        }
+        printf("]");
+        printf("%d%%...%c\n",num++,pic[num%4]);
+        fflush(stdout);
+        usleep(100000);
+    }
+    
+    return 0;
+}
 @end

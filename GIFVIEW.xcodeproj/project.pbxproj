@@ -11,7 +11,22 @@
 		DEFEA5A622DC25A10054873E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEFEA5A522DC25A10054873E /* Assets.xcassets */; };
 		DEFEA5A922DC25A10054873E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFEA5A722DC25A10054873E /* MainMenu.xib */; };
 		DEFEA5AC22DC25A10054873E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFEA5AB22DC25A10054873E /* main.m */; };
+		DEFEA5B422DC25B80054873E /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = DEFEA5B322DC25B80054873E /* 1.gif */; };
+		DEFEA5B722DC25FA0054873E /* GifView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFEA5B622DC25FA0054873E /* GifView.m */; };
+		DEFEA5BF22DC443A0054873E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFEA5BE22DC443A0054873E /* main.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DEFEA5BA22DC443A0054873E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DEFEA59F22DC259F0054873E /* GIFVIEW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GIFVIEW.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +37,22 @@
 		DEFEA5AA22DC25A10054873E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEFEA5AB22DC25A10054873E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DEFEA5AD22DC25A10054873E /* GIFVIEW.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GIFVIEW.entitlements; sourceTree = "<group>"; };
+		DEFEA5B322DC25B80054873E /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1.gif; sourceTree = "<group>"; };
+		DEFEA5B522DC25FA0054873E /* GifView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GifView.h; sourceTree = "<group>"; };
+		DEFEA5B622DC25FA0054873E /* GifView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GifView.m; sourceTree = "<group>"; };
+		DEFEA5BC22DC443A0054873E /* drawProgress */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = drawProgress; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEFEA5BE22DC443A0054873E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DEFEA59C22DC259F0054873E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEFEA5B922DC443A0054873E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				DEFEA5A122DC25A00054873E /* GIFVIEW */,
+				DEFEA5BD22DC443A0054873E /* drawProgress */,
 				DEFEA5A022DC25A00054873E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				DEFEA59F22DC259F0054873E /* GIFVIEW.app */,
+				DEFEA5BC22DC443A0054873E /* drawProgress */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,8 +83,11 @@
 		DEFEA5A122DC25A00054873E /* GIFVIEW */ = {
 			isa = PBXGroup;
 			children = (
+				DEFEA5B322DC25B80054873E /* 1.gif */,
 				DEFEA5A222DC25A00054873E /* AppDelegate.h */,
 				DEFEA5A322DC25A00054873E /* AppDelegate.m */,
+				DEFEA5B522DC25FA0054873E /* GifView.h */,
+				DEFEA5B622DC25FA0054873E /* GifView.m */,
 				DEFEA5A522DC25A10054873E /* Assets.xcassets */,
 				DEFEA5A722DC25A10054873E /* MainMenu.xib */,
 				DEFEA5AA22DC25A10054873E /* Info.plist */,
@@ -63,6 +95,14 @@
 				DEFEA5AD22DC25A10054873E /* GIFVIEW.entitlements */,
 			);
 			path = GIFVIEW;
+			sourceTree = "<group>";
+		};
+		DEFEA5BD22DC443A0054873E /* drawProgress */ = {
+			isa = PBXGroup;
+			children = (
+				DEFEA5BE22DC443A0054873E /* main.m */,
+			);
+			path = drawProgress;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +125,23 @@
 			productReference = DEFEA59F22DC259F0054873E /* GIFVIEW.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DEFEA5BB22DC443A0054873E /* drawProgress */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEFEA5C022DC443A0054873E /* Build configuration list for PBXNativeTarget "drawProgress" */;
+			buildPhases = (
+				DEFEA5B822DC443A0054873E /* Sources */,
+				DEFEA5B922DC443A0054873E /* Frameworks */,
+				DEFEA5BA22DC443A0054873E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = drawProgress;
+			productName = drawProgress;
+			productReference = DEFEA5BC22DC443A0054873E /* drawProgress */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -95,6 +152,9 @@
 				ORGANIZATIONNAME = "Dylan Xiao";
 				TargetAttributes = {
 					DEFEA59E22DC259F0054873E = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					DEFEA5BB22DC443A0054873E = {
 						CreatedOnToolsVersion = 10.0;
 					};
 				};
@@ -113,6 +173,7 @@
 			projectRoot = "";
 			targets = (
 				DEFEA59E22DC259F0054873E /* GIFVIEW */,
+				DEFEA5BB22DC443A0054873E /* drawProgress */,
 			);
 		};
 /* End PBXProject section */
@@ -122,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEFEA5B422DC25B80054873E /* 1.gif in Resources */,
 				DEFEA5A622DC25A10054873E /* Assets.xcassets in Resources */,
 				DEFEA5A922DC25A10054873E /* MainMenu.xib in Resources */,
 			);
@@ -136,6 +198,15 @@
 			files = (
 				DEFEA5AC22DC25A10054873E /* main.m in Sources */,
 				DEFEA5A422DC25A00054873E /* AppDelegate.m in Sources */,
+				DEFEA5B722DC25FA0054873E /* GifView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEFEA5B822DC443A0054873E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEFEA5BF22DC443A0054873E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +369,22 @@
 			};
 			name = Release;
 		};
+		DEFEA5C122DC443A0054873E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DEFEA5C222DC443A0054873E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -315,6 +402,15 @@
 			buildConfigurations = (
 				DEFEA5B122DC25A10054873E /* Debug */,
 				DEFEA5B222DC25A10054873E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEFEA5C022DC443A0054873E /* Build configuration list for PBXNativeTarget "drawProgress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEFEA5C122DC443A0054873E /* Debug */,
+				DEFEA5C222DC443A0054873E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
