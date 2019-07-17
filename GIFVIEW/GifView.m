@@ -22,6 +22,11 @@
     [super drawRect:dirtyRect];
     
     // Drawing code here.
+
+    [self registerForDraggedTypes:[NSArray arrayWithObjects:NSFilenamesPboardType,nil]];
+    if (_isDragIn) {
+        NSLog(@"DragIn.");
+    }
     [self drawGif];
 }
 
@@ -142,4 +147,36 @@
     [self.giftimer invalidate];
     self.giftimer = nil;
 }
+
+#pragma mark - Dragged Methods
+- (NSDragOperation)draggingEntered:(id)sender
+{
+    _isDragIn=YES;
+    [self setNeedsDisplay:YES];
+    return NSDragOperationCopy;
+}
+
+- (void)draggingExited:(id)sender
+{
+    _isDragIn=NO;
+    [self setNeedsDisplay:YES];
+}
+
+- (BOOL)prepareForDragOperation:(id)sender
+{
+    _isDragIn=NO;
+    [self setNeedsDisplay:YES];
+    return YES;
+}
+
+- (BOOL)performDragOperation:(id)sender
+{
+    if([sender draggingSource] !=self)
+    {
+        NSArray* filePaths = [[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType];
+        NSLog(@"文件地址:%@",filePaths);
+    }
+    return YES;
+}
+
 @end

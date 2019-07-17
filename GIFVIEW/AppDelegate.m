@@ -18,8 +18,10 @@
 
 @implementation AppDelegate
 
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    dragView.delegate = self;
 }
 
 
@@ -57,10 +59,23 @@ int drawProgress()
         }
         printf("]");
         printf("%d%%...%c\n",num++,pic[num%4]);
-        fflush(stdout);
+        fflush(stdout);  //清空输出缓冲区，并把缓冲区内容输出。
         usleep(100000);
     }
     
     return 0;
+}
+
+
+
+
+#pragma mark
+-(void) doGetDragDropArrayFiles:(NSArray*) fileLists
+{
+    NSString *path =@"";
+    for (NSString *content in fileLists) {
+        path =[path stringByAppendingFormat:@"%@\n",content];
+    }
+    [pathText setStringValue:path];
 }
 @end

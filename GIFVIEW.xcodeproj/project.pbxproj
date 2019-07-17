@@ -14,6 +14,7 @@
 		DEFEA5B422DC25B80054873E /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = DEFEA5B322DC25B80054873E /* 1.gif */; };
 		DEFEA5B722DC25FA0054873E /* GifView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFEA5B622DC25FA0054873E /* GifView.m */; };
 		DEFEA5BF22DC443A0054873E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFEA5BE22DC443A0054873E /* main.m */; };
+		DEFEA5EB22DF07A20054873E /* DragView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFEA5EA22DF07A20054873E /* DragView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,8 @@
 		DEFEA5B622DC25FA0054873E /* GifView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GifView.m; sourceTree = "<group>"; };
 		DEFEA5BC22DC443A0054873E /* drawProgress */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = drawProgress; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEFEA5BE22DC443A0054873E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DEFEA5E922DF07A20054873E /* DragView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragView.h; sourceTree = "<group>"; };
+		DEFEA5EA22DF07A20054873E /* DragView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				DEFEA5A322DC25A00054873E /* AppDelegate.m */,
 				DEFEA5B522DC25FA0054873E /* GifView.h */,
 				DEFEA5B622DC25FA0054873E /* GifView.m */,
+				DEFEA5E922DF07A20054873E /* DragView.h */,
+				DEFEA5EA22DF07A20054873E /* DragView.m */,
 				DEFEA5A522DC25A10054873E /* Assets.xcassets */,
 				DEFEA5A722DC25A10054873E /* MainMenu.xib */,
 				DEFEA5AA22DC25A10054873E /* Info.plist */,
@@ -198,6 +203,7 @@
 			files = (
 				DEFEA5AC22DC25A10054873E /* main.m in Sources */,
 				DEFEA5A422DC25A00054873E /* AppDelegate.m in Sources */,
+				DEFEA5EB22DF07A20054873E /* DragView.m in Sources */,
 				DEFEA5B722DC25FA0054873E /* GifView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

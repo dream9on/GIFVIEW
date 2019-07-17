@@ -7,9 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "DragView.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
-
+@interface AppDelegate : NSObject <NSApplicationDelegate,DragDropViewDelegate>
+{
+    __weak IBOutlet NSTextField *pathText;
+    
+    __weak IBOutlet DragView *dragView;
+}
 
 @end
 

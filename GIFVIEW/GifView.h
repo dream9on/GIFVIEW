@@ -11,6 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GifView : NSView
+{
+    BOOL _isDragIn;
+}
 -(void)setImage:(NSImage*)image;
 -(void)setImageURL:(NSString *)url;
 

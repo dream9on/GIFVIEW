@@ -29,7 +29,7 @@ int drawProgress()
         
         printf("%d%%...%c\r",num++,pic[num%4]);
         //NSLog(@"%d%%...%c\r",num++,pic[num%4]);
-        fflush(stdout);
+        fflush(stdout);  //清空输出缓冲区，并把缓冲区内容输出。
         usleep(100000);
     }
     
